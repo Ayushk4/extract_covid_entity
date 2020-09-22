@@ -4,6 +4,8 @@ Code for the system that bagged 1st position at EMNLP 2020 workshop WNUT Shared 
 
 Refer [shared task website](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html) for full details.
 
+**Code Credits**: The starter code for slot-filling model was obtained from [viczong/extract_COVID19_events_from_Twitter](https://github.com/viczong/extract_COVID19_events_from_Twitter)
+
 ## Dependencies and set-up
 
 - python 3.8
@@ -83,7 +85,7 @@ We release the models weights for our final submission.
 
 - Instructions for running our trained models on test set
 - Details about our model architecture.
-- Replicating other experiments.
+- Replicating our other experiments.
 
 ## License
 
