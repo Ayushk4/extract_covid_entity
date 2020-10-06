@@ -1,8 +1,10 @@
 # Extract COVID Entities
 
-Code for the system that bagged 1st position at EMNLP 2020 workshop WNUT Shared Task-3. 
+Code for the system that bagged 1st position at EMNLP 2020 workshop WNUT Shared Task-3.
 
 Refer [shared task website](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html) for full details.
+
+**Authors**: [Ayush Kaushal](https://github.com/Ayushk4) and [Tejas Vaidhya](https://github.com/tejasvaidhyadev)
 
 **Code Credits**: The starter code for slot-filling model was obtained from [viczong/extract_COVID19_events_from_Twitter](https://github.com/viczong/extract_COVID19_events_from_Twitter)
 
