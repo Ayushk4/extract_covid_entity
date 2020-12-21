@@ -1,6 +1,6 @@
 # Extract COVID Entities
 
-Leveraging Event Specific and Chunk Span features to Extract COVID Events - 1st at the leaderboard for the EMNLP 2020 workshop [WNUT Shared Task-3](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html).
+Leveraging Event Specific & Chunk Span features to Extract COVID Events - 1st at the leaderboard for EMNLP 2020 [WNUT Shared Task-3](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html).
 
 This Repo contains
 - Code for Models
@@ -117,8 +117,7 @@ Our model weights used in the submission have been [released now](https://github
 
 ##### Model performances on test set.
 
-We stand first overall as well as on `Denied Testing`, `Death`, `Cure/Prevention` categories. To get the 
-
+We stand first overall as well as on `Denied Testing`, `Death`, `Cure/Prevention` categories.
 
 | Task | Micro-F1 | Micro-Precision | Micro-Recall |
 | ------ | ------ | ------ | ------ |
