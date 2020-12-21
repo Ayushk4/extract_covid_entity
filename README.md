@@ -4,8 +4,8 @@ Leveraging Event Specific & Chunk Span features to Extract COVID Events - 1st at
 
 This Repo contains
 - Code for Models
-- Trained models used for final submission and reporting
-- Steps to replicate the results, including the dependencies.
+- Trained models used in the final submission.
+- Dependencies and steps to replicate results.
 
 Relevant Links: [arxiv-pdf](https://arxiv.org/pdf/2012.10052.pdf), [slides](https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing), [poster](https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf)
 
