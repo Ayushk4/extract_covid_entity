@@ -40,10 +40,12 @@ Our system contains two models, one for sentence classification and one for slot
 Refer [our paper](https://arxiv.org/pdf/2012.10052.pdf) for complete details.
 
 **Slot-Filling**
+----------------
 
 ![](images/slot_filling.png)
 
 **Classification**
+----------------
 
 ![](images/sent_classification.png)
 
@@ -75,20 +77,20 @@ Refer [our paper](https://arxiv.org/pdf/2012.10052.pdf) for complete details.
 ```pip install wandb```
 -->
 
-## Model Description
 
-
-
-## Instructions for training the models
+## Instructions
 
 0. Set up the codebase and requirements
    - `git clone https://github.com/Ayushk4/extract_covid_entity` & `cd extract_covid_entity`.
    - Follow the instructions from the `Dependencies and set-up` above to install the dependencies.
-   - Set up your wandb, if you are interested in logging your runs. `wandb login`.
+   - If you are interested in logging your runs, Set up your wandb. `wandb login`.
 1. Set up the dataset: Follow instructions given in `data/README.md`
 2. Recreating the experiments for our final submission:
-   - For slot-filling use the multitask bert training command from [here](https://github.com/viczong/extract_COVID19_events_from_Twitter#models-training-and-results): Add `--sentence_level` and `--run=<YOUR_RUN_NAME>` flags to the command. If you want to train on COVID_Twitter BERT, include `--covid` flag. Add `--wandb` if you want to track your runs on wandb.
-   - For sentence classification models use the following command, first pre_process using `python3 pre_process.py` and then `python3 sent_model.py --data <PREPROCESSED-FILE-LOCATION> --task " + <TASK-NAME>`
+   - **Slot-filling:** `python automate_multitask_bert_entity_classifier_experiments.py --sentence_level`.
+   - **Sentence classification:** First pre_process by `python3 pre_process.py` (required only once) and then `python3 sent_model.py --data <PREPROCESSED-FILE-LOCATION> --task " + <TASK-NAME>`
+   - You may add the following optional flags depending on which experiment you would like to replicate. Run_name - `--run=<YOUR_RUN_NAME>`; Use COVID_Twitter BERT - `--covid`. Track runs on Wandb - `--wandb`.
+
+
 ## Trained Models
 
 We release the models weights for our final submission.
@@ -125,16 +127,16 @@ We release the models weights for our final submission.
 | Cure/Prevention | 0.621 | 0.745 | 0.532 |
 | **Overall** | **0.660** | **0.727** | **0.604** |
 
-## Coming Soon!
+
 
 - Instructions for running our trained models on test set
-- Details about our model architecture.
-- Replicating our other experiments.
 
 ## Miscellanous
 
-**Code Credits**: The starter code for slot-filling model was obtained from [viczong/extract_COVID19_events_from_Twitter](https://github.com/viczong/extract_COVID19_events_from_Twitter)
+- If you face 
 
-**License**: MIT
+- For the slot-filling model, the starter code was obtained from [here](https://github.com/viczong/extract_COVID19_events_from_Twitter)
+
+- License: MIT
 
 
