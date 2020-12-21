@@ -93,7 +93,7 @@ Refer [our paper](https://arxiv.org/pdf/2012.10052.pdf) for complete details.
 
 ## Trained Models
 
-We release the models weights for our final submission.
+Our model weights used in the submission have been [released now](https://github.com/Ayushk4/extract_covid_entity/releases).
 
 ##### Slot-filling models
 
@@ -117,6 +117,8 @@ We release the models weights for our final submission.
 
 ##### Model performances on test set.
 
+We stand first overall as well as on `Denied Testing`, `Death`, `Cure/Prevention` categories. To get the 
+
 
 | Task | Micro-F1 | Micro-Precision | Micro-Recall |
 | ------ | ------ | ------ | ------ |
@@ -128,15 +130,13 @@ We release the models weights for our final submission.
 | **Overall** | **0.660** | **0.727** | **0.604** |
 
 
-
-- Instructions for running our trained models on test set
-
 ## Miscellanous
 
-- If you face 
+- You may contact us by opening an issue on this repo. Please allow 2-3 days of time to address the issue.
 
 - For the slot-filling model, the starter code was obtained from [here](https://github.com/viczong/extract_COVID19_events_from_Twitter)
 
 - License: MIT
 
+**Update: Dec 2020**: The dataset is no longer public due to Twitter Privacy Policy. To get access to the dataset, please mail `zong.56@osu.edu` and cc `alan.ritter@cc.gatech.edu`.
 
