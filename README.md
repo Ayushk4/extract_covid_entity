@@ -1,15 +1,64 @@
 # Extract COVID Entities
 
-Code for the system that bagged 1st position at EMNLP 2020 workshop WNUT Shared Task-3.
+Leveraging Event Specific and Chunk Span features to Extract COVID Events - 1st at the leaderboard for the EMNLP 2020 workshop [WNUT Shared Task-3](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html).
 
-Refer [shared task website](http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html) for full details.
+This Repo contains
+- Code for Models
+- Trained models used for final submission and reporting
+- Steps to replicate the results, including the dependencies.
+
+Relevant Links: [arxiv-pdf](https://arxiv.org/pdf/2012.10052.pdf), [slides](https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing), [poster](https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf)
+
+Please cite with the following BiBTeX code:
+
+```@article{2012.10052,
+Author = {Ayush Kaushal and Tejas Vaidhya},
+Title = {Leveraging Event Specific and Chunk Span features to Extract COVID Events from tweets},
+Year = {2020},
+Eprint = {arXiv:2012.10052},
+Doi = {10.18653/v1/2020.wnut-1.79},
+}
+```
 
 **Authors**: [Ayush Kaushal](https://github.com/Ayushk4) and [Tejas Vaidhya](https://github.com/tejasvaidhyadev)
 
-**Code Credits**: The starter code for slot-filling model was obtained from [viczong/extract_COVID19_events_from_Twitter](https://github.com/viczong/extract_COVID19_events_from_Twitter)
+## Overview
+
+### Abstract
+
+Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for WNUT 2020 Shared Task-3. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks 1st at the leader-board with F1 of 0.6598, without using any ensembles or additional datasets. The code and trained models
+are available at this [https url](https://github.com/Ayushk4/extract_covid_entity/).
+
+### System overview
+
+Our system contains two models, one for sentence classification and one for slot-filling task, both with the following enhancements:
+- An event-prediction task as auxiliary subtask
+- Fuse event-prediction features for all the event-specific subtasks
+- Weighted pooling over the candidate chunk span enabling the model to attend to subtask specific cues
+- Domain-specific Covid-Twitter Bert
+
+Refer [our paper](https://arxiv.org/pdf/2012.10052.pdf) for complete details.
+
+**Slot-Filling**
+
+![](images/slot_filling.png)
+
+**Classification**
+
+![](images/sent_classification.png)
 
 ## Dependencies and set-up
 
+| Dependency | Version | Installation Command |
+| ---------- | ------- | -------------------- |
+| Python     | 3.8     | `conda create --name covid_entities python=3.8` and `conda activate covid_entities` |
+| PyTorch, cudatoolkit    | 1.5.0, 10.1   | `conda install pytorch==1.5.0 cudatoolkit=10.1 -c pytorch` |
+| Transformers (Huggingface) | 2.9.0 | `pip install transformers==2.9.0` |
+| Scikit-learn | 0.23.1 | `pip install scikit-learn==0.23.1` |
+| scipy        | 1.5.0  | `pip install scipy==1.5.0` |
+| ekphrasis    | 0.5.1  | `pip install ekphrasis==0.5.1` |
+| wandb        | -      | `pip install wandb`
+<!--
 - python 3.8
 ```conda create --name covid_entities python=3.8``` & ```conda activate covid_entities```
 - PyTorch 1.5.0, cudatoolkit=10.1
@@ -24,18 +73,11 @@ Refer [shared task website](http://noisy-text.github.io/2020/extract_covid19_eve
 ```pip install ekphrasis==0.5.1```
 - wandb
 ```pip install wandb```
+-->
 
 ## Model Description
 
-There are two models: one for slot-filling task and other for sentence classification. Both as built on 
 
-### Slot-Filling
-
-![](images/slot_filling.png)
-
-### Sentence Classification
-
-![](images/sent_classification.png)
 
 ## Instructions for training the models
 
@@ -89,7 +131,10 @@ We release the models weights for our final submission.
 - Details about our model architecture.
 - Replicating our other experiments.
 
-## License
+## Miscellanous
 
-MIT
+**Code Credits**: The starter code for slot-filling model was obtained from [viczong/extract_COVID19_events_from_Twitter](https://github.com/viczong/extract_COVID19_events_from_Twitter)
+
+**License**: MIT
+
 
